@@ -33,9 +33,3 @@ li:first-child{
 
 li:not(:first-child) {
   border-top: 1px solid lightgrey;
-
-
-.fa{
-  color: black;
-  font-size: 30px;
-}
