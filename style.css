@@ -32,7 +32,7 @@ li:first-child{
 }
 
 li:not(:first-child) {
-  border-top: 1px solid gray;
+  border-top: 1px solid lightgrey;
 
 
 .fa{

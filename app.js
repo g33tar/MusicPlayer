@@ -3,7 +3,7 @@ var song1 = document.getElementById('songA')
 
   food.addEventListener('click', function(){
     song1.play()
-  toggle(food);
+    toggle(food);
   })
 
 
@@ -12,7 +12,7 @@ var song2 = document.getElementById('songB')
 
     thrill.addEventListener('click', function(){
       song2.play()
-    toggle(thrill);
+      toggle(thrill);
   })
 
 var blues = document.getElementById('blues')
@@ -32,18 +32,18 @@ var song4 = document.getElementById('songD')
   })
 
 var toggle = function(element){
-  var audioFile;
+  var aFile;
   if(element.classList.contains('fa-play')){
     element.classList.remove('fa-play');
     element.classList.add('fa-stop');
-    audioFile = element.parentNode.children[1];
-    play(audioFile);
+    aFile = element.parentNode.children[2];
+    play(aFile);
   }
   else{
     element.classList.remove('fa-stop');
     element.classList.add('fa-play');
-    audioFile = element.parentNode.children[1];
-    stop(audioFile);
+    aFile = element.parentNode.children[2];
+    stop(aFile);
     }
   }
 
@@ -51,8 +51,6 @@ var toggle = function(element){
     element.pause();
   }
 
-  var play = function(element){
+var play = function(element){
     element.play();
   }
-
-  
