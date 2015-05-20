@@ -1,4 +1,4 @@
-var icon1 = document.getElementById('icon1')
+vvar icon1 = document.getElementById('icon1')
 var icon2 = document.getElementById('icon2')
 var icon3 = document.getElementById('icon3')
 var icon4 = document.getElementById('icon4')
@@ -10,7 +10,6 @@ var song4 = document.getElementById('songD')
 
 var element = document.getElementsByClassName("header")
 
-
 var stopSongs = function() {
   song1.pause();
   song2.pause();
@@ -18,58 +17,54 @@ var stopSongs = function() {
   song4.pause();
 };
 
-  icon1.addEventListener('click', function(){
+icon1.addEventListener('click', function() {
+  if (song1.paused) {
     stopSongs();
-    if(song1.paused){
-      song1.play();
-      element[0].innerHTML= "Now Playing: " + "<em>" + "Favorite Food" + "</em>";
-      icon1.classList.toggle('fa-stop')
-    }
-    else{
-      song1.pause();
-      element[0].innerHTML= "Select a song!";
-    }
+    song1.play();
+    element[0].innerHTML = "Now Playing: " + "<em>" + "Favorite Food" + "</em>";
+    icon1.classList.toggle('fa-stop')
+  } else {
+    song1.pause();
+    icon1.classList.toggle('fa-stop')
+    element[0].innerHTML = "Select a song!";
+  }
+});
 
-  });
-
-  icon2.addEventListener('click', function(){
+icon2.addEventListener('click', function() {
+  if (song2.paused) {
     stopSongs();
-    if(song2.paused){
-      song2.play();
-      element[0].innerHTML= "Now Playing: " + "<em>" + "Thrill Of The Hunt" + "</em>";
-      icon2.classList.toggle('fa-stop')
-    }
-    else{
-      song2.pause();
-      element[0].innerHTML= "Select a song!";
-    }
+    song2.play();
+    element[0].innerHTML = "Now Playing: " + "<em>" + "Thrill Of The Hunt" + "</em>";
+    icon2.classList.toggle('fa-stop')
+  } else {
+    song2.pause();
+    icon2.classList.toggle('fa-stop')
+    element[0].innerHTML = "Select a song!";
+  }
+});
 
-  });
-
-  icon3.addEventListener('click', function(){
+icon3.addEventListener('click', function() {
+  if (song3.paused) {
     stopSongs();
-    if(song3.paused){
-      song3.play();
-      element[0].innerHTML= "Now Playing: " + "<em>" + "Transgender Dysphoria Blues" + "</em>";
-      icon3.classList.toggle('fa-stop')
-    }
-    else{
-      song3.pause();
-      element[0].innerHTML= "Select a song!";
-    }
+    song3.play();
+    element[0].innerHTML = "Now Playing: " + "<em>" + "Transgender Dysphoria Blues" + "</em>";
+    icon3.classList.toggle('fa-stop')
+  } else {
+    song3.pause();
+    icon3.classList.toggle('fa-stop')
+    element[0].innerHTML = "Select a song!";
+  }
+});
 
-  });
-
-  icon4.addEventListener('click', function(){
+icon4.addEventListener('click', function() {
+  if (song4.paused) {
     stopSongs();
-    if(song4.paused){
-      song4.play();
-      element[0].innerHTML= "Now Playing: " + "<em>" + "Where I'm From" + "</em>";
-      icon4.classList.toggle('fa-stop')
-    }
-    else{
-      song4.pause();
-      element[0].innerHTML= "Select a song!";
-    }
-
-  });
+    song4.play();
+    element[0].innerHTML = "Now Playing: " + "<em>" + "Where I'm From" + "</em>";
+    icon4.classList.toggle('fa-stop')
+  } else {
+    song4.pause();
+    icon4.classList.toggle('fa-stop')
+    element[0].innerHTML = "Select a song!";
+  }
+});
